@@ -12,12 +12,15 @@ public class TargetDestroy : MonoBehaviour
             Destroy(collision.gameObject);
         }   
     }
+    
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("TargetObject"))
         {
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
         }
+        
     }
 }
