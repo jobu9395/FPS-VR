@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandomMovement : MonoBehaviour
 {
-    public float speed = 2.5f;
+    public float speed = 100f;
 
     void Start()
     {
@@ -13,6 +13,6 @@ public class RandomMovement : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(Mathf.PingPong(Time.time, 5), transform.position.y, transform.position.z);
+        transform.position = new Vector3(Mathf.PingPong(Time.time * 2, speed), transform.position.y, transform.position.z);
     }
 }
